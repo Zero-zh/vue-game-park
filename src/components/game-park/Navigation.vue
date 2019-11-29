@@ -1,11 +1,13 @@
 <template>
     <div class="nav">
       <div class="left">
+        <a href="http://localhost:8080/index">
         游戏<span>公园</span>
+        </a>
       </div>
       <div class="right">
-        <a>主页</a>
-        <a>博客</a>
+        <a href="http://localhost:8080/index">主页</a>
+        <a href="http://localhost:8080/blog">博客</a>
         <a>关于我们</a>
       </div>
     </div>
@@ -28,9 +30,18 @@ export default {
 </script>
 
 <style lang='less'>
-body{
-  font-family: 'nobile';
-}
+
+  .nav {
+    a{
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+
+  body{
+    font-family: 'nobile';
+  }
   .nav{
     background: #434343;
     color: white;
@@ -49,6 +60,7 @@ body{
     cursor: pointer;
     span{
       color: #EA4C89;
+      margin-left: 10px;
     }
 
   }

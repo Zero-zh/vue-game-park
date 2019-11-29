@@ -1,8 +1,8 @@
 <template>
     <div class="bottom">
       <div class="line-one">
-        <a>主页</a>
-        <a>博客</a>
+        <a href="http://localhost:8080/index">主页</a>
+        <a href="http://localhost:8080/blog">博客</a>
         <a>关于我们</a>
       </div>
       <div class="line-two">
@@ -23,6 +23,12 @@ export default {
 body{
   font-family: 'nobile';
 }
+  .bottom {
+    a {
+      color:white;
+    }
+  }
+
   .bottom {
     display: flex;
     flex-direction: column;
