@@ -3,11 +3,11 @@
       <div class="line-one">
         <a href="http://localhost:8080/index">主页</a>
         <a href="http://localhost:8080/blog">博客</a>
-        <a href="http://localhost/game-park-bootstrap/aboutUs.html">关于我们</a>
+        <a href="http://localhost/bootstrap-game-park/aboutUs.html">关于我们</a>
       </div>
       <div class="line-two">
         <p>
-        游戏公园 | 设计 by <span>吉林省明日科技有限公司</span>
+        游戏公园 | 设计 by <span @click="goToCompany">吉林省明日科技有限公司</span>
         </p>
       </div>
     </div>
@@ -16,6 +16,11 @@
 <script>
 export default {
     name: 'Bottom',
+    methods:{
+      goToCompany: ()=>{
+          window.location.href="https://www.mingrisoft.com/";
+      }
+    }
 }
 </script>
 

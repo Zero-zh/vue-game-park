@@ -64,7 +64,7 @@ export default {
     },
     methods:{
         goToBlogDetail: ()=>{
-            window.location.href="http://localhost/game-park-bootstrap/BlogDetail.html";
+            window.location.href="http://localhost/bootstrap-game-park/BlogDetail.html";
         }
     }
 }
