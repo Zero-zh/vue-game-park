@@ -7,7 +7,7 @@
             <div class="pics">
                 <el-carousel :interval="4000" type="card" height="409px">
                     <el-carousel-item v-for="item in recommendGamePic" :key="item">
-                    <h3 class="medium"><img :src="item"></h3>
+                        <h3 class="medium"><img :src="item"></h3>
                     </el-carousel-item>
                 </el-carousel>
             </div>
@@ -16,8 +16,8 @@
         <div class="new-game">
             <h3>最新游戏</h3>
             <div class="new-game-pic">
-                <div class="new-game-pic-item" v-for="item in newGamePic" :key="item">
-                    <div class="test">
+                <div class="new-game-pic-item" v-for="item in newGamePic" :key="item" @click="goToBlogDetail">
+                    <div class="go-to-blog-detail">
                         <h5>Games</h5>
                         <span>领先的在线休闲游戏平台</span>
                     </div>
@@ -57,13 +57,18 @@ export default {
                 require('@/assets/images/a5.jpg'),
                 require('@/assets/images/a6.jpg'),
                 require('@/assets/images/a7.jpg'),
-                require('@/assets/images/a1.jpg'),
-                require('@/assets/images/a2.jpg'),
-
+                require('@/assets/images/a8.jpg'),
+                require('@/assets/images/a9.jpg'),
             ],
         }
     },
+    methods:{
+        goToBlogDetail: ()=>{
+            window.location.href="http://localhost/game-park-bootstrap/BlogDetail.html";
+        }
+    }
 }
+
 </script>
 
 <style lang='less' scoped>
@@ -182,4 +187,5 @@ export default {
       display: inline-block;
       width: 1200px;
   }
+
 </style>

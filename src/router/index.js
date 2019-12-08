@@ -9,15 +9,29 @@ const routes = [
   {
     path: '/index',
     name: 'HomePage',
-    component: () => import('@/views/game-park/HomePage.vue')
+    component: () => import('@/views/game-park/HomePage.vue'),
+    meta: {
+      title: '首页' 
+    }
   },
   {
     path: '/blog',
     name: 'Blog',
-    component: () => import('@/views/game-park/Blog.vue')
+    component: () => import('@/views/game-park/Blog.vue'),
+    meta: {
+      title: '博客' 
+    }
   },
   {
     path: '/',
+    name: 'HomePage',
+    component: () => import('@/views/game-park/HomePage.vue'),
+    meta: {
+      title: '首页' 
+    }
+  },
+  {
+    path: '/home',
     name: 'home',
     component: Home
   },

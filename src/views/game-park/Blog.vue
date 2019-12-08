@@ -5,31 +5,29 @@
     <div class="blog">
         <h3>博客</h3>
         <div class="blog-all">
-
             <div class="blog-item" v-for="(item,index) in all" :key="index">
-            <!-- <div v-for="content in contents" :key="content"> -->
-                <div class="item-img">
+                <div class="item-img" @click="goToBlogDetail">
                     <img :src="item.blogPic">
                 </div>
                 <div class="item-text">
-                    <h4>{{item.title}}</h4>
+                    <h4 @click="goToBlogDetail">{{item.title}}</h4>
                     <p>{{item.contents}}</p>
                     <div class="detail">
                         <span>
                         <img :src="date">
                             22.02.2015
                         </span>
-                        <a class="commnets">
+                        <a class="commnets" @click="goToBlogDetail">
                         <img :src="comment">
                             24
                         </a>
                     </div>
                 </div>
                 <div class="more-info">
-                    <a><button>更多信息</button></a>
+                    <a><button @click="goToBlogDetail">更多信息</button></a>
                 </div>
             </div>
-            </div>
+        </div>
 
       </div>
 
@@ -88,7 +86,13 @@ export default {
         }
     ],
     };
-  }
+  },
+
+    methods:{
+        goToBlogDetail: ()=>{
+            window.location.href="http://localhost/game-park-bootstrap/BlogDetail.html";
+        }
+    }
 };
 </script>
 

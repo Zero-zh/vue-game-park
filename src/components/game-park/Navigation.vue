@@ -1,4 +1,5 @@
 <template>
+  <header>
     <div class="nav">
       <div class="left">
         <a href="http://localhost:8080/index">
@@ -8,24 +9,15 @@
       <div class="right">
         <a href="http://localhost:8080/index">主页</a>
         <a href="http://localhost:8080/blog">博客</a>
-        <a>关于我们</a>
+        <a href="http://localhost/game-park-bootstrap/aboutUs.html">关于我们</a>
       </div>
     </div>
+  </header>
 </template>
 
 <script>
 export default {
-    name: 'Navigation',
-    data(){
-      return {
-        picItem : [
-          require('@/assets/images/ba.jpg'),
-          require('@/assets/images/ba1.jpg'),
-          require('@/assets/images/ba2.jpg'),
-          require('@/assets/images/ba3.jpg')
-        ],
-      }
-    }
+    name: 'Navigation'
 }
 </script>
 
